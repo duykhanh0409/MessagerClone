@@ -9,6 +9,7 @@ import SwiftUI
 
 struct InboxView: View {
     @State private var showNewMessageView = false
+    @State private var user = User.MOCK_USER
     var body: some View {
         NavigationStack {
             ActiveNowView()
@@ -19,13 +20,18 @@ struct InboxView: View {
                 .listStyle(PlainListStyle())
                 .frame(height: .infinity)
             }
+            .navigationDestination(for: User.self, destination: { user in
+                ProfileView(user: user)
+            })
             .fullScreenCover(isPresented: $showNewMessageView, content: {
                 NewMessageView()
             })
             .toolbar(content: {
                 ToolbarItem(placement: .navigationBarLeading) {
                     HStack {
-                        Image(systemName: "person.circle.fill")
+                        NavigationLink(value: user) {
+                            CirculaProfileImageView(user: user, size: .xSmall)
+                        }
                         Text("Chats")
                             .font(.title)
                         
