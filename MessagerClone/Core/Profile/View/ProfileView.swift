@@ -47,7 +47,9 @@ struct ProfileView: View {
                 }
                 
                 Section {
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                    Button(action: {
+                        AuthService.shared.signOut()
+                    }, label: {
                         Text("Log out")
                     })
                     
