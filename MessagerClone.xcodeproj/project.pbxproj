@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B15EBB72B7B43E900167712 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B15EBB62B7B43E900167712 /* UserService.swift */; };
 		8B99B5402B5BB2DE00ED20B3 /* MessagerCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B99B53F2B5BB2DE00ED20B3 /* MessagerCloneApp.swift */; };
 		8B99B5422B5BB2DE00ED20B3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B99B5412B5BB2DE00ED20B3 /* ContentView.swift */; };
 		8B99B5442B5BB2E000ED20B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B99B5432B5BB2E000ED20B3 /* Assets.xcassets */; };
@@ -59,6 +60,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B15EBB62B7B43E900167712 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		8B99B53C2B5BB2DE00ED20B3 /* MessagerClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessagerClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B99B53F2B5BB2DE00ED20B3 /* MessagerCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagerCloneApp.swift; sourceTree = "<group>"; };
 		8B99B5412B5BB2DE00ED20B3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 		8BA86A002B5C168D00B76079 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				8B15EBB62B7B43E900167712 /* UserService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -454,6 +457,7 @@
 				8BA86A092B5CB99900B76079 /* InboxView.swift in Sources */,
 				8BA86A182B5D0B5B00B76079 /* SettingOptionsViewModel.swift in Sources */,
 				8BF93CBC2B655835005147EF /* LoginViewModel.swift in Sources */,
+				8B15EBB72B7B43E900167712 /* UserService.swift in Sources */,
 				8BA86A1A2B5D104400B76079 /* ProfileViewModel.swift in Sources */,
 				8BA86A1C2B5D617600B76079 /* User.swift in Sources */,
 				8BA86A1F2B5D685800B76079 /* CirculaProfileImageView.swift in Sources */,
