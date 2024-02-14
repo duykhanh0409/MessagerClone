@@ -9,34 +9,46 @@ import SwiftUI
 
 struct InboxView: View {
     @State private var showNewMessageView = false
-    @State private var user = User.MOCK_USER
+    @StateObject var viewModel = InboxViewModel()
+    @State private var selectedUser: User?
+    @State private var showChat = false
+//    @State private var user = User.MOCK_USER
+    
+    private var user:User? {
+        return viewModel.currentUser
+    }
     var body: some View {
         NavigationStack {
-            ActiveNowView()
-            List {
-                ForEach(0 ... 10, id: \.self) { message in
-                    InboxRowView()
+            ScrollView{
+                ActiveNowView()
+                List {
+                    ForEach(0 ... 10, id: \.self) { message in
+                        InboxRowView()
+                    }
                 }
                 .listStyle(PlainListStyle())
-                .frame(height: .infinity)
+                .frame(height: UIScreen.main.bounds.height)
             }
-            .navigationDestination(for: User.self, destination: { user in
+            .onChange(of: selectedUser, perform: { newValue in
+                showChat = newValue != nil
+            })
+           .navigationDestination(for: User.self, destination: { user in
                 ProfileView(user: user)
             })
+           .navigationDestination(isPresented: $showChat, destination: {
+               if let user = selectedUser {
+                   ChatView(user: user)
+               }
+           })
             .fullScreenCover(isPresented: $showNewMessageView, content: {
-                NewMessageView()
+                NewMessageView(selectedUser: $selectedUser)
             })
             .toolbar(content: {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    HStack {
                         NavigationLink(value: user) {
                             CirculaProfileImageView(user: user, size: .xSmall)
                         }
-                        Text("Chats")
-                            .font(.title)
-                        
-                            .fontWeight(.semibold)
-                    }
+                       
                    
                 }
                 

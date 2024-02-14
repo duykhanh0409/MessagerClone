@@ -25,7 +25,7 @@ struct ProfileView: View {
                 }
                    
             }
-            Text("Khanh Nguyen")
+            Text(UserService.shared.currentUser?.fullname ?? "Fullname")
                 .font(.title2)
                 .fontWeight(.semibold)
             

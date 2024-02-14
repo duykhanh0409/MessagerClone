@@ -9,6 +9,8 @@ import SwiftUI
 
 struct NewMessageView: View {
     @State private var searchText = ""
+    @StateObject private var viewModel = NewMessageViewModel()
+    @Binding var selectedUser: User?
     @Environment(\.dismiss) var dismiss
     var body: some View {
         NavigationStack {
@@ -24,7 +26,7 @@ struct NewMessageView: View {
                     .frame(maxWidth:.infinity, alignment: .leading)
                     .padding()
                 
-                ForEach(0 ... 10, id: \.self) { contact in
+                ForEach(viewModel.users) { user in
                     VStack{
                         HStack{
                             Image(systemName: "person.circle.fill")
@@ -32,7 +34,7 @@ struct NewMessageView: View {
                                 .frame(width: 32, height: 32)
                                 .foregroundColor(Color(.systemGray4))
                             
-                            Text("Truc Map")
+                            Text(user.fullname)
                                 .font(.subheadline)
                                 .fontWeight(.semibold)
                             Spacer()
@@ -41,6 +43,10 @@ struct NewMessageView: View {
                         
                         Divider()
                             .padding(.bottom)
+                    }
+                    .onTapGesture {
+                        selectedUser = user
+                        dismiss()
                     }
                 }
             }
@@ -64,6 +70,6 @@ struct NewMessageView: View {
 
 #Preview {
     NavigationStack{
-        NewMessageView()
+        NewMessageView(selectedUser:.constant(User.MOCK_USER))
     }
 }
