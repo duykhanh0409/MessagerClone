@@ -8,8 +8,15 @@
 import SwiftUI
 
 struct ChatView: View {
-    @State private var messsageText = ""
+    @StateObject var viewModel: ChatViewModel
     let user:User
+    
+    // this is a way to inject user into ChatViewModel
+    init( user: User) {
+        self.user = user
+        self._viewModel = StateObject(wrappedValue: ChatViewModel(user: user))
+    }
+    
     var body: some View {
         VStack {
             ScrollView{
@@ -37,14 +44,17 @@ struct ChatView: View {
             Spacer()
             
             ZStack(alignment: .trailing, content: {
-                TextField("Message....", text: $messsageText, axis: .vertical)
+                TextField("Message....", text: $viewModel.messageText, axis: .vertical)
                     .padding(12)
                     .padding(.trailing, 48)
                     .background(Color(.systemGroupedBackground))
                     .clipShape(Capsule())
                     .font(.subheadline)
                 
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                Button(action: {
+                    viewModel.sendMessage()
+                    viewModel.messageText = ""
+                }, label: {
                     Text("Send")
                         .fontWeight(.semibold)
                 })
