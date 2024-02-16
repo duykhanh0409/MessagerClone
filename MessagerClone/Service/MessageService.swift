@@ -18,6 +18,8 @@ struct MessageService {
         let currentUserRef = messagesCollection.document(currentUid).collection(chatPartnerId).document()
         let chatPartnerRef = messagesCollection.document(chatPartnerId).collection(currentUid)
         
+//        let recentCurrentUserRef = FirestoreConstants.MessagesCollection.document(currentUid).collection("recent-messages").document(chatPartnerId)
+        
         let messageId = currentUserRef.documentID
         
         let message = Message(

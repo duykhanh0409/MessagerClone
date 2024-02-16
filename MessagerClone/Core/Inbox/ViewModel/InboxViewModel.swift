@@ -34,14 +34,22 @@ class InboxViewModel: ObservableObject {
     
     private func loadInitialMessages(fromChanges changes: [DocumentChange]){
         var messages = changes.compactMap({try? $0.document.data(as: Message.self)})
-        
+        var filterRecentMessage = [Message]()
         for i in 0 ..< messages.count {
             let message = messages[i]
             
             UserService.fetchUser(withUid: message.chatPartnerId) { user in
                 messages[i].user = user
-                self.recentMessages.append(messages[i])
+                filterRecentMessage.append(messages[i])
+                self.recentMessages = Utils.uniqueElementsFrom(array: filterRecentMessage)
+//                if !filterRecentMessage.contains(messages[i].user?.id ?? "") {
+//                    self.recentMessages.append(messages[i])
+//                    filterRecentMessage.insert(messages[i].user?.id ?? "")
+//                }
+               
             }
         }
+//        filterRecentMessage.count
+//        print("khanh count", filterRecentMessage)
     }
 }

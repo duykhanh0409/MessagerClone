@@ -39,63 +39,62 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "59D7B99F-D7C5-456D-85A0-CC903B1D25C0"
+            uuid = "CF1A75F1-9883-4CBE-B6CB-B78037E75D27"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MessagerClone/Core/Inbox/Service/InboxService.swift"
+            filePath = "MessagerClone/Core/Inbox/ViewModel/InboxViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "observeRecentMessages()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "046F4A15-FD7D-402E-A6C2-B317B0C66822"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MessagerClone/Core/Inbox/Service/InboxService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "observeRecentMessages()"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "loadInitialMessages(fromChanges:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "046F4A15-FD7D-402E-A6C2-B317B0C66822 - 91605f9bc816b487"
+                  uuid = "CF1A75F1-9883-4CBE-B6CB-B78037E75D27 - ac8684d7ae28eb25"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MessagerClone.InboxService.observeRecentMessages() -&gt; ()"
+                  symbolName = "closure #2 (MessagerClone.User) -&gt; () in MessagerClone.InboxViewModel.loadInitialMessages(fromChanges: Swift.Array&lt;__C.FIRDocumentChange&gt;) -&gt; ()"
                   moduleName = "MessagerClone"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/khanhnguyen/Documents/personal_project/MessagerClone/MessagerClone/Core/Inbox/Service/InboxService.swift"
+                  urlString = "file:///Users/khanhnguyen/Documents/personal_project/MessagerClone/MessagerClone/Core/Inbox/ViewModel/InboxViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "64">
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "484">
                </Location>
                <Location
-                  uuid = "046F4A15-FD7D-402E-A6C2-B317B0C66822 - 94d7b4a691167d5b"
+                  uuid = "CF1A75F1-9883-4CBE-B6CB-B78037E75D27 - ac8684d7ae28eb25"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__C.FIRDocumentChange) -&gt; Swift.Bool in closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MessagerClone.InboxService.observeRecentMessages() -&gt; ()"
+                  symbolName = "closure #2 (MessagerClone.User) -&gt; () in MessagerClone.InboxViewModel.loadInitialMessages(fromChanges: Swift.Array&lt;__C.FIRDocumentChange&gt;) -&gt; ()"
                   moduleName = "MessagerClone"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/khanhnguyen/Documents/personal_project/MessagerClone/MessagerClone/Core/Inbox/Service/InboxService.swift"
+                  urlString = "file:///Users/khanhnguyen/Documents/personal_project/MessagerClone/MessagerClone/Core/Inbox/ViewModel/InboxViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "36">
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "508">
+               </Location>
+               <Location
+                  uuid = "CF1A75F1-9883-4CBE-B6CB-B78037E75D27 - ac8684d7ae28eb25"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (MessagerClone.User) -&gt; () in MessagerClone.InboxViewModel.loadInitialMessages(fromChanges: Swift.Array&lt;__C.FIRDocumentChange&gt;) -&gt; ()"
+                  moduleName = "MessagerClone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khanhnguyen/Documents/personal_project/MessagerClone/MessagerClone/Core/Inbox/ViewModel/InboxViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "544">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -103,17 +102,127 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0CF05CDF-3D43-4E40-BCC3-F3CA38D9484F"
-            shouldBeEnabled = "No"
+            uuid = "1774F871-4D0F-4B21-8C71-6E136F354EE3"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MessagerClone/Core/Inbox/ViewModel/InboxViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "setupSubscribers()"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "loadInitialMessages(fromChanges:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1774F871-4D0F-4B21-8C71-6E136F354EE3 - ac8684d7ae28eb6b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (MessagerClone.User) -&gt; () in MessagerClone.InboxViewModel.loadInitialMessages(fromChanges: Swift.Array&lt;__C.FIRDocumentChange&gt;) -&gt; ()"
+                  moduleName = "MessagerClone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khanhnguyen/Documents/personal_project/MessagerClone/MessagerClone/Core/Inbox/ViewModel/InboxViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "1004">
+               </Location>
+               <Location
+                  uuid = "1774F871-4D0F-4B21-8C71-6E136F354EE3 - ac8684d7ae28eb6b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (MessagerClone.User) -&gt; () in MessagerClone.InboxViewModel.loadInitialMessages(fromChanges: Swift.Array&lt;__C.FIRDocumentChange&gt;) -&gt; ()"
+                  moduleName = "MessagerClone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khanhnguyen/Documents/personal_project/MessagerClone/MessagerClone/Core/Inbox/ViewModel/InboxViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "1340">
+               </Location>
+               <Location
+                  uuid = "1774F871-4D0F-4B21-8C71-6E136F354EE3 - ac8684d7ae28eb6b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (MessagerClone.User) -&gt; () in MessagerClone.InboxViewModel.loadInitialMessages(fromChanges: Swift.Array&lt;__C.FIRDocumentChange&gt;) -&gt; ()"
+                  moduleName = "MessagerClone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khanhnguyen/Documents/personal_project/MessagerClone/MessagerClone/Core/Inbox/ViewModel/InboxViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "1376">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DB295249-2679-475D-AA04-E45813E95864"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MessagerClone/Core/Inbox/ViewModel/InboxViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "loadInitialMessages(fromChanges:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DB295249-2679-475D-AA04-E45813E95864 - 7dd89c162d960f30"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MessagerClone.InboxViewModel.loadInitialMessages(fromChanges: Swift.Array&lt;__C.FIRDocumentChange&gt;) -&gt; ()"
+                  moduleName = "MessagerClone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khanhnguyen/Documents/personal_project/MessagerClone/MessagerClone/Core/Inbox/ViewModel/InboxViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "924">
+               </Location>
+               <Location
+                  uuid = "DB295249-2679-475D-AA04-E45813E95864 - 7dd89c162d960f30"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MessagerClone.InboxViewModel.loadInitialMessages(fromChanges: Swift.Array&lt;__C.FIRDocumentChange&gt;) -&gt; ()"
+                  moduleName = "MessagerClone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khanhnguyen/Documents/personal_project/MessagerClone/MessagerClone/Core/Inbox/ViewModel/InboxViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "1088">
+               </Location>
+               <Location
+                  uuid = "DB295249-2679-475D-AA04-E45813E95864 - 7dd89c162d960f30"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MessagerClone.InboxViewModel.loadInitialMessages(fromChanges: Swift.Array&lt;__C.FIRDocumentChange&gt;) -&gt; ()"
+                  moduleName = "MessagerClone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khanhnguyen/Documents/personal_project/MessagerClone/MessagerClone/Core/Inbox/ViewModel/InboxViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "1120">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

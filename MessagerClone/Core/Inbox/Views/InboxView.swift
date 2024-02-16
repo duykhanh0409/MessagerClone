@@ -19,21 +19,41 @@ struct InboxView: View {
     }
     var body: some View {
         NavigationStack {
-            ScrollView{
-                ActiveNowView()
+
                 List {
+                    ActiveNowView()
+                        .listRowSeparator(.hidden)
+                        .listRowInsets(EdgeInsets())
+                        .padding(.vertical)
+                        .padding(.horizontal,4)
                     ForEach(viewModel.recentMessages, id: \.self) { message in
-                        InboxRowView(message: message)
+                        ZStack{
+                            NavigationLink(value: message) {
+                                EmptyView()
+                            }.opacity(0.0)
+                            
+                            InboxRowView(message: message)
+                        }
                     }
                 }
-                .listStyle(PlainListStyle())
-                .frame(height: UIScreen.main.bounds.height)
-            }
+            .navigationTitle("Chats")
+            .navigationBarTitleDisplayMode(.inline)
+            .listStyle(PlainListStyle())
             .onChange(of: selectedUser, perform: { newValue in
                 showChat = newValue != nil
             })
-           .navigationDestination(for: User.self, destination: { user in
-                ProfileView(user: user)
+            .navigationDestination(for: Message.self, destination: { message in
+                if let user = message.user {
+                    ChatView(user: user)
+                }
+            })
+            .navigationDestination(for: Route.self, destination: { route in
+                switch route {
+                case .profile(let user):
+                    ProfileView(user: user)
+                case .chatView(let user):
+                    ChatView(user: user)
+                }
             })
            .navigationDestination(isPresented: $showChat, destination: {
                if let user = selectedUser {
@@ -45,9 +65,11 @@ struct InboxView: View {
             })
             .toolbar(content: {
                 ToolbarItem(placement: .navigationBarLeading) {
-                        NavigationLink(value: user) {
-                            CirculaProfileImageView(user: user, size: .xSmall)
-                        }
+                    if let user {
+                        NavigationLink(value: Route.profile(user)) {
+                                CirculaProfileImageView(user: user, size: .xSmall)
+                            }
+                    }
                        
                    
                 }
