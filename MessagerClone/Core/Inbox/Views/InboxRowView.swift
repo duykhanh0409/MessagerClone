@@ -9,19 +9,22 @@ import SwiftUI
 
 
 struct InboxRowView: View {
-     
+    let message: Message
+    
     var body: some View {
         HStack(alignment: .top,spacing: 12, content: {
-            Image(systemName: "person.circle.fill")
-                .resizable()
-                .frame(width: 64, height: 64)
-                .foregroundColor(Color(.systemGray4))
+//            Image(systemName: "person.circle.fill")
+//                .resizable()
+//                .frame(width: 64, height: 64)
+//                .foregroundColor(Color(.systemGray4))
+            
+            CirculaProfileImageView(user: message.user, size: .medium)
             
             VStack(alignment: .leading, spacing: 4){
-                Text("khanh title")
+                Text(message.user?.fullname ?? "")
                     .font(.subheadline)
                     .fontWeight(.semibold)
-                Text("khanh Subtitme with more than one line")
+                Text(message.messageText)
                     .font(.subheadline)
                     .foregroundColor(.gray)
                     .lineLimit(2)
@@ -41,6 +44,6 @@ struct InboxRowView: View {
     }
 }
 
-#Preview {
-    InboxRowView()
-}
+//#Preview {
+//    InboxRowView()
+//}
